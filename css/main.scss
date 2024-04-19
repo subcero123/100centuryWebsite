@@ -1,0 +1,142 @@
+body {
+  background-color: #f4eddc;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  .contenido-principal{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .central{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.2;
+    .one--hundred{
+        opacity: 0.8;
+        width: 100%;
+        scale: 2.5;
+        mask-image: url(../Hundred.b3353aed.svg);
+        -webkit-mask-position: center;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+
+        &--lady{
+            opacity: 1;
+        }
+
+        .mask{
+            width: 120%;
+            height: 100%;
+            .image{
+                width: 120%;
+                height: 100%;
+                transform: translateY(190px);
+                transform: translateX(-350px);
+
+                &--lady{
+                    width: 120%;
+                    height: 100%;
+                    transform: translate(-250px, 300px);
+                }
+            }
+        }
+      }
+  }
+  .title{
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    top: 65%;
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #849BA1;
+    img{
+        width: 100%;
+        height: auto;
+    }
+  }
+
+  .l-contenedor-circulo{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    scale: 0.12;
+    
+
+    &--1{
+        top: -20%;
+        z-index: 2;
+    }
+
+    &--2{
+        bottom: -25%;
+        left: 35%;
+    }
+
+    .l-circulo{
+        background-color: #849BA1;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .oculto{
+            display: none;
+        }
+
+        &--yellow{
+            background-color: #DBAA62;
+        }
+    }
+
+
+  }
+  .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    scale: 0.23;
+    top: 15%;
+    left: -30%;
+
+    .one {
+      align-items: center;
+      height: 100%;
+      width: auto;
+      background-image: url(../clouds.jpg);
+      background-position: 65%;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      mask-image: url(../One.71d8aa39.svg);
+      -webkit-mask-position: center;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      .mask{
+        .image{
+            transform: translateX(5);
+            transform: translateY(-85px);
+        }
+    }
+    }
+
+
+  }
+
+}

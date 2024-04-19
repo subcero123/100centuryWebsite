@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split Type</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <section>
+      <div class="contenido-principal">
+        <div class="central">
+          <div class="one--hundred">
+            <div class="mask">
+              <img class="image" src="clouds_complete.jpg" />
+            </div>
+          </div>
+        </div>
+        <div class="central">
+          <div class="one--hundred one--hundred--lady">
+            <div class="mask">
+              <img class="image--lady" src="lady.png" />
+            </div>
+          </div>
+        </div>
+        <div class="title">
+            <img src="wordmark.png" alt="">
+        </div>
+        <div class="item item--separado">
+          <div class="one">
+            <div class="mask">
+              <img data-v-3d7ef269="" class="image" src="take-the-quiz.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="l-contenedor-circulo l-contenedor-circulo--1">
+          <div class="l-circulo">
+            <img src="our-history.png" alt="" />
+          </div>
+        </div>
+
+        <div class="l-contenedor-circulo l-contenedor-circulo--2">
+          <div class="l-circulo l-circulo--yellow">
+            <img src="celebrate-with-us.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script>
+      // smooth scroll
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      const tl = gsap.timeline({
+        defaults: { ease: "power1.out", duration: 1 },
+      });
+
+      //Empieza cubriendo toda la pantalla
+      tl.to(".central", {
+        duration: 7,
+        opacity: 1,
+        scale: 0.09,
+      })
+        .to(
+          ".image--lady",
+          {
+            duration: 7,
+            y: 50,
+          },
+          "<"
+        )
+        .to(
+          ".image",
+          {
+            duration: 7,
+            y: -100,
+          },
+          "<"
+        )
+        .from('.title', {
+          duration: 2,
+          opacity: 0,
+          scale: 1.5
+        }, '-=1.5')
+        .to('.title', {
+          duration: 1,
+          y: 50,
+          opacity: 0
+        }, '-=.5')
+        .from(
+          ".l-contenedor-circulo--1",
+          {
+            duration: 4,
+            stagger: 0.25,
+            top: "-3%",
+            left: "-1%",
+          },
+          "+=0.5"
+        )
+        .from(
+          ".l-contenedor-circulo--2",
+          { duration: 4, stagger: 0.25, top: "-3%", left: "5.5%" },
+          "<"
+        )
+        .from(
+          ".item",
+          { duration: 4, stagger: 0.25, top: "2%", left: "-8.5%" },
+          "<"
+        );
+
+      const lenis = new Lenis();
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
+  </body>
+</html>
