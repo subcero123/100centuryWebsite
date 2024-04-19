@@ -20,12 +20,12 @@ section .central {
   position: absolute;
   opacity: 0.2;
 }
-section .central .one--hundred {
+section .central .one {
   opacity: 0.8;
   width: 100%;
-  scale: 2.5;
-  -webkit-mask-image: url(../Hundred.b3353aed.svg);
-          mask-image: url(../Hundred.b3353aed.svg);
+  scale: 1.82;
+  -webkit-mask-image: url(../One.71d8aa39.svg);
+          mask-image: url(../One.71d8aa39.svg);
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -33,23 +33,51 @@ section .central .one--hundred {
   -webkit-mask-size: contain;
           mask-size: contain;
 }
+section .central .one--zero {
+  scale: 1.9;
+  transform: translateX(0px);
+  -webkit-mask-image: url(../Zero.0fdf939f.svg);
+          mask-image: url(../Zero.0fdf939f.svg);
+}
+section .central .one--zero .mask {
+  width: 150%;
+  height: 100%;
+}
+section .central .one--hundred {
+  scale: 2.5;
+  -webkit-mask-image: url(../Hundred.b3353aed.svg);
+          mask-image: url(../Hundred.b3353aed.svg);
+}
 section .central .one--hundred--lady {
   opacity: 1;
 }
-section .central .one--hundred .mask {
+section .central .one .mask {
   width: 120%;
   height: 100%;
 }
-section .central .one--hundred .mask .image {
+section .central .one .mask .image {
   width: 120%;
   height: 100%;
   transform: translateY(190px);
   transform: translateX(-350px);
 }
-section .central .one--hundred .mask .image--lady {
+section .central .one .mask .image--lady {
   width: 120%;
   height: 100%;
   transform: translate(-250px, 300px);
+}
+section .cero-derecha {
+  transform: translateX(70px);
+}
+section .cero-derecha .image {
+  width: 120%;
+  height: 100%;
+}
+section .uno-izquierda {
+  transform: translate(-165px, 5px);
+}
+section .elemento-libre {
+  opacity: 0;
 }
 section .title {
   position: absolute;
@@ -65,85 +93,4 @@ section .title {
 section .title img {
   width: 100%;
   height: auto;
-}
-section .l-contenedor-circulo {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  scale: 0.12;
-  opacity: 0;
-}
-section .l-contenedor-circulo--1 {
-  top: -20%;
-  z-index: 2;
-}
-section .l-contenedor-circulo--2 {
-  bottom: -25%;
-  left: 35%;
-}
-section .l-contenedor-circulo .l-circulo {
-  background-image: url(../clouds_complete.jpg);
-  background-size: cover;
-  background-color: #849ba1;
-  border-radius: 50%;
-  background-size: 210% 120%;
-  background-position: 45% 110%;
-  scale: 1;
-  position: relative;
-  overflow: hidden;
-}
-section .l-contenedor-circulo .l-circulo .lady {
-  width: 150%;
-  height: 100%;
-  position: absolute;
-  z-index: 2;
-  transform: translate(10%, 5%);
-  scale: 1.8;
-}
-section .l-contenedor-circulo .l-circulo .lady img {
-  opacity: 1;
-}
-section .l-contenedor-circulo .l-circulo img {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-}
-section .l-contenedor-circulo .l-circulo .oculto {
-  display: none;
-}
-section .l-contenedor-circulo .l-circulo--yellow {
-  z-index: 2;
-  background-position: 65% 100%;
-  background-color: #dbaa62;
-}
-section .item {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  scale: 0.23;
-  top: 15%;
-  left: -30%;
-  opacity: 0;
-}
-section .item .one {
-  align-items: center;
-  height: 100%;
-  width: auto;
-  background-image: url(../clouds.jpg);
-  background-position: 65%;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  -webkit-mask-image: url(../One.71d8aa39.svg);
-          mask-image: url(../One.71d8aa39.svg);
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-}
-section .item .one .mask .image {
-  transform: translateX(5);
-  transform: translateY(-85px);
 }/*# sourceMappingURL=main.css.map */

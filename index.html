@@ -16,44 +16,47 @@
   <body>
     <section>
       <div class="contenido-principal">
-        <div class="central">
-          <div class="one--hundred">
+        <div class="central entrada">
+          <div class="one one--hundred">
             <div class="mask">
-              <img class="image" src="clouds_complete.jpg" />
+              <img class="image image--entrada" src="clouds_complete.jpg" />
             </div>
           </div>
         </div>
-        <div class="central">
-          <div class="one--hundred one--hundred--lady">
+        <div class="central entrada">
+          <div class="one one--hundred one--hundred--lady">
             <div class="mask">
               <img class="image--lady" src="lady.png" />
             </div>
           </div>
         </div>
-        <div class="title">
-            <img src="wordmark.png" alt="">
-        </div>
-        <div class="item item--separado">
+
+        <div class="central uno-izquierda elemento-libre">
           <div class="one">
             <div class="mask">
-              <img class="image" src="take-the-quiz.png" />
+              <img class="image" src="clouds_complete.jpg" />
             </div>
           </div>
         </div>
 
-        <div class="l-contenedor-circulo l-contenedor-circulo--1">
-          <div class="l-circulo">
-            <div class="lady">
-              <img src="lady.png" alt="" />
+        <div class="central  elemento-libre">
+          <div class="one one--zero">
+            <div class="mask">
+              <img class="image" src="clouds_complete.jpg" />
             </div>
-            <img  src="our-history.png" alt="" />
           </div>
         </div>
 
-        <div class="l-contenedor-circulo l-contenedor-circulo--2">
-          <div class="l-circulo l-circulo--yellow">
-            <img src="celebrate-with-us.png" alt="" />
+        <div class="central cero-derecha elemento-libre">
+          <div class="one one--zero">
+            <div class="mask">
+              <img class="image" src="clouds_complete.jpg" />
+            </div>
           </div>
+        </div>
+
+        <div class="title">
+          <img src="wordmark.png" alt="" />
         </div>
       </div>
     </section>
@@ -83,9 +86,12 @@
       //Empieza cubriendo toda la pantalla
       tl.to(".central", {
         duration: 7,
-        opacity: 1,
         scale: 0.09,
       })
+      .to(".entrada", {
+        duration: 7,
+        opacity: 1,
+      }, "<")
         .to(
           ".image--lady",
           {
@@ -95,51 +101,47 @@
           "<"
         )
         .to(
-          ".image",
+          ".image--entrada",
           {
             duration: 7,
             y: -100,
           },
           "<"
         )
-        .from('.title', {
-          duration: 2,
-          opacity: 0,
-          scale: 1.5
-        }, '-=1.5')
-        .to('.title', {
-          duration: 1,
-          y: 50,
-          opacity: 0
-        }, '-=.5')
-        .to(['.item', '.l-contenedor-circulo'], {
-          duration: 0.1,
-          opacity: 1,
-        }, '<')
-        .to('.central', {
-          duration: 0.01,
-          opacity: 0,
-        }, '<')
         .from(
-          ".l-contenedor-circulo--1",
+          ".title",
           {
-            duration: 4,
-            stagger: 0.25,
-            top: "-3%",
-            left: "-1%",
+            duration: 2,
+            opacity: 0,
+            scale: 1.5,
           },
-          "+=0.2"
+          "-=1.5"
         )
-        .from(
-          ".l-contenedor-circulo--2",
-          { duration: 4, stagger: 0.25, top: "-3%", left: "5.5%" },
+        .to(
+          ".title",
+          {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+          },
+          "-=.5"
+        )
+        .to(
+          ".entrada",
+          {
+            duration: 0.1,
+            opacity: 0,
+          },
+          "-=0.1"
+        )
+        .to(
+          ".elemento-libre",
+          {
+            opacity: 1,
+            duration: 0.1,
+          },
           "<"
         )
-        .from(
-          ".item",
-          { duration: 4, stagger: 0.25, top: "2%", left: "-8.5%" },
-          "<"
-        );
 
       const lenis = new Lenis();
 

@@ -20,20 +20,38 @@ section {
     height: 100%;
     position: absolute;
     opacity: 0.2;
-    .one--hundred {
+
+    .one{
       opacity: 0.8;
       width: 100%;
-      scale: 2.5;
-      mask-image: url(../Hundred.b3353aed.svg);
+      scale: 1.82;
+      mask-image: url(../One.71d8aa39.svg);
       -webkit-mask-position: center;
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: contain;
 
-      &--lady {
-        opacity: 1;
+
+      &--zero{
+        scale: 1.9;
+        transform: translateX(0px);
+
+
+        mask-image: url(../Zero.0fdf939f.svg);
+        .mask {
+          width: 150%;
+          height: 100%;
+         }
       }
 
+      &--hundred{
+        scale: 2.5;
+        mask-image: url(../Hundred.b3353aed.svg);
+        &--lady {
+          opacity: 1;
+        }
+
+      }
       .mask {
         width: 120%;
         height: 100%;
@@ -52,6 +70,25 @@ section {
       }
     }
   }
+
+  .cero-derecha{
+    transform: translateX(70px);
+
+    .image{
+      width: 120%;
+      height: 100%;
+    }
+  }
+
+  .uno-izquierda{
+    transform: translate(-165px, 5px);
+    
+  }
+
+  .elemento-libre{
+    opacity: 0;
+  }
+
   .title {
     position: absolute;
     width: 350px;
@@ -65,102 +102,6 @@ section {
     img {
       width: 100%;
       height: auto;
-    }
-  }
-
-  .l-contenedor-circulo {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    scale: 0.12;
-    opacity: 0;
-
-    &--1 {
-      top: -20%;
-      z-index: 2;
-
-
-    }
-
-    &--2 {
-      bottom: -25%;
-      left: 35%;
-    }
-
-    .l-circulo {
-      background-image: url(../clouds_complete.jpg);
-      background-size: cover;
-      background-color: #849ba1;
-      border-radius: 50%;
-      //escalar el fondo de imagen de fondo
-      background-size: 210% 120%;
-      //Mover la imagen de fondo
-      background-position: 45% 110%;
-      scale: 1;
-      position: relative;
-      overflow: hidden;
-
-      .lady {
-        width: 150%;
-        height: 100%;
-        position: absolute;
-        z-index: 2;
-        //Mover la imagen
-        transform: translate(10%, 5%);
-        scale: 1.8;
-
-        img{
-          opacity: 1;
-        }
-      }
-
-      img {
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .oculto {
-        display: none;
-      }
-
-      &--yellow {
-        z-index: 2;
-        background-position: 65% 100%;
-        background-color: #dbaa62;
-      }
-    }
-  }
-
-  .item {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    scale: 0.23;
-    top: 15%;
-    left: -30%;
-    opacity: 0;
-
-    .one {
-      align-items: center;
-      height: 100%;
-      width: auto;
-      background-image: url(../clouds.jpg);
-      background-position: 65%;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      mask-image: url(../One.71d8aa39.svg);
-      -webkit-mask-position: center;
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: contain;
-      .mask {
-        .image {
-          transform: translateX(5);
-          transform: translateY(-85px);
-        }
-      }
     }
   }
 }
