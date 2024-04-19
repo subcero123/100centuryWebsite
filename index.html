@@ -36,14 +36,17 @@
         <div class="item item--separado">
           <div class="one">
             <div class="mask">
-              <img data-v-3d7ef269="" class="image" src="take-the-quiz.png" />
+              <img class="image" src="take-the-quiz.png" />
             </div>
           </div>
         </div>
 
         <div class="l-contenedor-circulo l-contenedor-circulo--1">
           <div class="l-circulo">
-            <img src="our-history.png" alt="" />
+            <div class="lady">
+              <img src="lady.png" alt="" />
+            </div>
+            <img  src="our-history.png" alt="" />
           </div>
         </div>
 
@@ -109,6 +112,14 @@
           y: 50,
           opacity: 0
         }, '-=.5')
+        .to(['.item', '.l-contenedor-circulo'], {
+          duration: 0.1,
+          opacity: 1,
+        }, '<')
+        .to('.central', {
+          duration: 0.01,
+          opacity: 0,
+        }, '<')
         .from(
           ".l-contenedor-circulo--1",
           {
@@ -117,7 +128,7 @@
             top: "-3%",
             left: "-1%",
           },
-          "+=0.5"
+          "+=0.2"
         )
         .from(
           ".l-contenedor-circulo--2",

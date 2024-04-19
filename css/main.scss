@@ -7,7 +7,7 @@ section {
   height: 100vh;
   overflow: hidden;
 
-  .contenido-principal{
+  .contenido-principal {
     width: 100%;
     height: 100%;
     position: relative;
@@ -15,45 +15,44 @@ section {
     flex-direction: row;
   }
 
-
-  .central{
+  .central {
     width: 100%;
     height: 100%;
     position: absolute;
     opacity: 0.2;
-    .one--hundred{
-        opacity: 0.8;
-        width: 100%;
-        scale: 2.5;
-        mask-image: url(../Hundred.b3353aed.svg);
-        -webkit-mask-position: center;
-        mask-position: center;
-        mask-repeat: no-repeat;
-        mask-size: contain;
+    .one--hundred {
+      opacity: 0.8;
+      width: 100%;
+      scale: 2.5;
+      mask-image: url(../Hundred.b3353aed.svg);
+      -webkit-mask-position: center;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
 
-        &--lady{
-            opacity: 1;
-        }
+      &--lady {
+        opacity: 1;
+      }
 
-        .mask{
+      .mask {
+        width: 120%;
+        height: 100%;
+        .image {
+          width: 120%;
+          height: 100%;
+          transform: translateY(190px);
+          transform: translateX(-350px);
+
+          &--lady {
             width: 120%;
             height: 100%;
-            .image{
-                width: 120%;
-                height: 100%;
-                transform: translateY(190px);
-                transform: translateX(-350px);
-
-                &--lady{
-                    width: 120%;
-                    height: 100%;
-                    transform: translate(-250px, 300px);
-                }
-            }
+            transform: translate(-250px, 300px);
+          }
         }
       }
+    }
   }
-  .title{
+  .title {
     position: absolute;
     width: 350px;
     height: 200px;
@@ -62,50 +61,77 @@ section {
     opacity: 1;
     transform: translateX(-50%);
     font-size: 2rem;
-    color: #849BA1;
-    img{
-        width: 100%;
-        height: auto;
+    color: #849ba1;
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 
-  .l-contenedor-circulo{
+  .l-contenedor-circulo {
     height: 100%;
     width: 100%;
     position: absolute;
     scale: 0.12;
-    
+    opacity: 0;
 
-    &--1{
-        top: -20%;
+    &--1 {
+      top: -20%;
+      z-index: 2;
+
+
+    }
+
+    &--2 {
+      bottom: -25%;
+      left: 35%;
+    }
+
+    .l-circulo {
+      background-image: url(../clouds_complete.jpg);
+      background-size: cover;
+      background-color: #849ba1;
+      border-radius: 50%;
+      //escalar el fondo de imagen de fondo
+      background-size: 210% 120%;
+      //Mover la imagen de fondo
+      background-position: 45% 110%;
+      scale: 1;
+      position: relative;
+      overflow: hidden;
+
+      .lady {
+        width: 150%;
+        height: 100%;
+        position: absolute;
         z-index: 2;
-    }
+        //Mover la imagen
+        transform: translate(10%, 5%);
+        scale: 1.8;
 
-    &--2{
-        bottom: -25%;
-        left: 35%;
-    }
-
-    .l-circulo{
-        background-color: #849BA1;
-        border-radius: 50%;
-        overflow: hidden;
         img{
-            width: 100%;
-            height: 100%;
+          opacity: 1;
         }
+      }
 
-        .oculto{
-            display: none;
-        }
+      img {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-        &--yellow{
-            background-color: #DBAA62;
-        }
+      .oculto {
+        display: none;
+      }
+
+      &--yellow {
+        z-index: 2;
+        background-position: 65% 100%;
+        background-color: #dbaa62;
+      }
     }
-
-
   }
+
   .item {
     width: 100%;
     height: 100%;
@@ -113,6 +139,7 @@ section {
     scale: 0.23;
     top: 15%;
     left: -30%;
+    opacity: 0;
 
     .one {
       align-items: center;
@@ -128,15 +155,12 @@ section {
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: contain;
-      .mask{
-        .image{
-            transform: translateX(5);
-            transform: translateY(-85px);
+      .mask {
+        .image {
+          transform: translateX(5);
+          transform: translateY(-85px);
         }
+      }
     }
-    }
-
-
   }
-
 }
