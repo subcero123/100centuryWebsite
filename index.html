@@ -31,26 +31,70 @@
           </div>
         </div>
 
+        <!-- Uno mascara -->
         <div class="central uno-izquierda elemento-libre">
           <div class="one">
             <div class="mask">
-              <img class="image" src="clouds_complete.jpg" />
+              <img class="image image--uno " src="clouds_complete.jpg" />
             </div>
           </div>
         </div>
 
-        <div class="central  elemento-libre">
-          <div class="one one--zero">
+        <div class="central uno-izquierda elemento-libre">
+          <div class="one one--lady">
             <div class="mask">
-              <img class="image" src="clouds_complete.jpg" />
+              <img class="image image--uno image--uno--lady" src="take-the-quiz.png" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Circulo mascara con imagen original-->
+        <div class="central elemento-libre cero-mascara-bg">
+          <div class="one one--zero one--zero--middle">
+            <div class="mask">
+              <img class="image image--middle" src="fondo_azul.png" />
+              <img
+                class="image image--middle image--middle--after"
+                src="our-history.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Circulo mascara con imagen con lady -->
+        <div class="central elemento-libre cero-mascara-bg cero-lady">
+          <div class="one one--zero one--zero--middle">
+            <div class="mask">
+              <img class="image image--middle--lady" src="lady.png" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Segunda mascara con fondo -->
+        <div class="central elemento-libre cero-mascara-fondo">
+          <div class="one one--zero one--zero--right">
+            <div class="mask">
+              <img class="image image--background" src="fondo_carne.png" />
             </div>
           </div>
         </div>
 
         <div class="central cero-derecha elemento-libre">
-          <div class="one one--zero">
+          <div class="one one--zero one--zero--right--back">
             <div class="mask">
-              <img class="image" src="clouds_complete.jpg" />
+              <img class="image image--last" src="fondo_amarillo.png" />
+              <img
+              class="image image--last image--last--after"
+              src="celebrate-with-us.png"
+            />
+            </div>
+          </div>
+        </div>
+
+        <div class="central cero-derecha elemento-libre cero-lady">
+          <div class="one one--zero one--zero--right--back">
+            <div class="mask">
+              <img class="image image--last image--last--lady" src="lady.png" />
             </div>
           </div>
         </div>
@@ -84,14 +128,18 @@
       });
 
       //Empieza cubriendo toda la pantalla
-      tl.to(".central", {
-        duration: 7,
-        scale: 0.09,
-      })
-      .to(".entrada", {
+      tl.to(".contenido-principal", {
         duration: 7,
         opacity: 1,
-      }, "<")
+      })
+        .to(
+          ".central",
+          {
+            duration: 7,
+            scale: 0.09,
+          },
+          "<"
+        )
         .to(
           ".image--lady",
           {
@@ -127,21 +175,69 @@
           "-=.5"
         )
         .to(
-          ".entrada",
-          {
-            duration: 0.1,
-            opacity: 0,
-          },
-          "-=0.1"
-        )
-        .to(
-          ".elemento-libre",
+          [".elemento-libre", ".one--zero"],
           {
             opacity: 1,
-            duration: 0.1,
+            duration: 0.005,
+          },
+          "+=0.5"
+        )
+        .to(
+          [".entrada"],
+          {
+            opacity: 0,
+            duration: 0.005,
           },
           "<"
         )
+        .to(
+          [".uno-izquierda"],
+          {
+            xPercent: -25,
+            yPercent: 5,
+          },
+          "<"
+        )
+        .to(
+          [".cero-mascara-bg", ".cero-mascara-fondo"],
+          {
+            xPercent: -5,
+            yPercent: -20,
+          },
+          "<"
+        )
+        .to(
+          [".cero-lady", ".cero-mascara-fondo"],
+          {
+            opacity: 0,
+            duration: 0.2,
+          },
+          "<"
+        )
+        .to(
+          [".image--middle--after", ".image--last--after"],
+          {
+            opacity: 1,
+            duration: 1,
+          },
+          "<"
+        )
+        .from(
+          [".image--uno--lady"],
+          {
+            scale: 1,
+            x:-5,
+          },
+          "<"
+        )
+        .to(
+          [".cero-derecha"],
+          {
+            xPercent: 18,
+            yPercent: 20,
+          },
+          "<"
+        );
 
       const lenis = new Lenis();
 

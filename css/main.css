@@ -13,17 +13,20 @@ section .contenido-principal {
   position: relative;
   display: flex;
   flex-direction: row;
+  opacity: 0.2;
 }
 section .central {
   width: 100%;
   height: 100%;
   position: absolute;
-  opacity: 0.2;
+  opacity: 1;
+  z-index: 2;
 }
 section .central .one {
-  opacity: 0.8;
+  opacity: 1;
   width: 100%;
   scale: 1.82;
+  z-index: 2;
   -webkit-mask-image: url(../One.71d8aa39.svg);
           mask-image: url(../One.71d8aa39.svg);
   -webkit-mask-position: center;
@@ -32,12 +35,27 @@ section .central .one {
           mask-repeat: no-repeat;
   -webkit-mask-size: contain;
           mask-size: contain;
+  position: relative;
+}
+section .central .one--lady {
+  transform: translate(0px, -250px);
+  scale: 1.2;
 }
 section .central .one--zero {
-  scale: 1.9;
+  scale: 1.79;
   transform: translateX(0px);
   -webkit-mask-image: url(../Zero.0fdf939f.svg);
           mask-image: url(../Zero.0fdf939f.svg);
+}
+section .central .one--zero--middle {
+  transform: translateX(-160px);
+}
+section .central .one--zero--right {
+  scale: 1.63;
+  transform: translate(-170px, -80px);
+}
+section .central .one--zero--right--back {
+  transform: translateX(160px);
 }
 section .central .one--zero .mask {
   width: 150%;
@@ -54,12 +72,59 @@ section .central .one--hundred--lady {
 section .central .one .mask {
   width: 120%;
   height: 100%;
+  overflow: hidden;
 }
 section .central .one .mask .image {
   width: 120%;
   height: 100%;
-  transform: translateY(190px);
-  transform: translateX(-350px);
+  transform: translateY(90px);
+  transform: translateX(-250px);
+}
+section .central .one .mask .image--uno {
+  transform: translate(-350px, -250px);
+  width: 120%;
+  height: 100%;
+}
+section .central .one .mask .image--uno--lady {
+  transform: translate(-150px, -550px);
+  width: 100%;
+  height: 100%;
+}
+section .central .one .mask .image--middle {
+  width: 120%;
+  scale: 1.4;
+  transform: translate(-115px, -100px);
+}
+section .central .one .mask .image--middle--after {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  scale: 1;
+  top: 10%;
+  left: 5%;
+}
+section .central .one .mask .image--middle--lady {
+  scale: 1.5;
+  transform: translate(-25px, 45px);
+}
+section .central .one .mask .image--last {
+  width: 120%;
+  scale: 1.4;
+  transform: translate(-645px, -100px);
+}
+section .central .one .mask .image--last--after {
+  position: absolute;
+  opacity: 0;
+  width: 90%;
+  height: 90%;
+  scale: 1;
+  top: 10%;
+  left: 35%;
+}
+section .central .one .mask .image--last--lady {
+  scale: 1.5;
+  transform: translate(-535px, 30px);
 }
 section .central .one .mask .image--lady {
   width: 120%;
@@ -68,12 +133,24 @@ section .central .one .mask .image--lady {
 }
 section .cero-derecha {
   transform: translateX(70px);
+  z-index: -1;
 }
 section .cero-derecha .image {
   width: 120%;
   height: 100%;
 }
+section .cero-mascara-bg {
+  z-index: 1;
+}
+section .cero-mascara-fondo {
+  z-index: 0;
+}
+section .cero-mascara-fondo .image {
+  width: 120%;
+  height: 100%;
+}
 section .uno-izquierda {
+  z-index: 2;
   transform: translate(-165px, 5px);
 }
 section .elemento-libre {
