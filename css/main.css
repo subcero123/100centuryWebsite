@@ -119,7 +119,7 @@ section .central .one .mask .image--last--after {
   width: 90%;
   height: 90%;
   scale: 1;
-  top: 10%;
+  top: 18%;
   left: 35%;
 }
 section .central .one .mask .image--last--lady {
@@ -131,6 +131,14 @@ section .central .one .mask .image--lady {
   height: 100%;
   transform: translate(-250px, 300px);
 }
+section .central .texto {
+  font-size: 22rem;
+  font-weight: bold;
+  line-height: 1px;
+  position: relative;
+  top: -90%;
+  left: 90%;
+}
 section .cero-derecha {
   transform: translateX(70px);
   z-index: -1;
@@ -141,6 +149,10 @@ section .cero-derecha .image {
 }
 section .cero-mascara-bg {
   z-index: 1;
+}
+section .cero-mascara-bg .texto {
+  top: -130%;
+  left: 110%;
 }
 section .cero-mascara-fondo {
   z-index: 0;
@@ -155,6 +167,10 @@ section .uno-izquierda {
 }
 section .elemento-libre {
   opacity: 0;
+}
+section .cero-derecha .texto {
+  top: -130%;
+  left: -120%;
 }
 section .title {
   position: absolute;

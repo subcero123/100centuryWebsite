@@ -35,7 +35,15 @@
         <div class="central uno-izquierda elemento-libre">
           <div class="one">
             <div class="mask">
-              <img class="image image--uno " src="clouds_complete.jpg" />
+              <img class="image image--uno" src="clouds_complete.jpg" />
+            </div>
+          </div>
+          <div class="texto">
+            <div class="take">
+              <p>TAKE</p>
+            </div>
+            <div class="take-two">
+              <p>THE QUIZ</p>
             </div>
           </div>
         </div>
@@ -43,7 +51,10 @@
         <div class="central uno-izquierda elemento-libre">
           <div class="one one--lady">
             <div class="mask">
-              <img class="image image--uno image--uno--lady" src="take-the-quiz.png" />
+              <img
+                class="image image--uno image--uno--lady"
+                src="take-the-quiz.png"
+              />
             </div>
           </div>
         </div>
@@ -52,11 +63,19 @@
         <div class="central elemento-libre cero-mascara-bg">
           <div class="one one--zero one--zero--middle">
             <div class="mask">
-              <img class="image image--middle" src="fondo_azul.png" />
+              <img class="image image--middle" src="clouds_complete.jpg" />
               <img
                 class="image image--middle image--middle--after"
                 src="our-history.png"
               />
+            </div>
+          </div>
+          <div class="texto">
+            <div class="take">
+              <p>OUR</p>
+            </div>
+            <div class="take-two">
+              <p>HISTORY</p>
             </div>
           </div>
         </div>
@@ -82,11 +101,19 @@
         <div class="central cero-derecha elemento-libre">
           <div class="one one--zero one--zero--right--back">
             <div class="mask">
-              <img class="image image--last" src="fondo_amarillo.png" />
+              <img class="image image--last" src="clouds_complete.jpg" />
               <img
-              class="image image--last image--last--after"
-              src="celebrate-with-us.png"
-            />
+                class="image image--last image--last--after"
+                src="celebrate-with-us.png"
+              />
+            </div>
+          </div>
+          <div class="texto">
+            <div class="take">
+              <p>CELEBRATE</p>
+            </div>
+            <div class="take-two">
+              <p>WITH US</p>
             </div>
           </div>
         </div>
@@ -161,18 +188,18 @@
           {
             duration: 2,
             opacity: 0,
-            scale: 1.5,
+            scale: 2,
           },
           "-=1.5"
         )
         .to(
           ".title",
           {
-            duration: 1,
+            duration: 2,
             y: 50,
             opacity: 0,
           },
-          "-=.5"
+          "+=.5"
         )
         .to(
           [".elemento-libre", ".one--zero"],
@@ -180,7 +207,7 @@
             opacity: 1,
             duration: 0.005,
           },
-          "+=0.5"
+          "<"
         )
         .to(
           [".entrada"],
@@ -211,6 +238,11 @@
           {
             opacity: 0,
             duration: 0.2,
+            onComplete: function () {
+              // Una vez que la animación de desvanecimiento esté completa, cambiamos el contenido de la imagen
+              document.querySelector(".image--middle").src = "fondo_azul.png";
+              document.querySelector(".image--last").src = "fondo_amarillo.png";
+            },
           },
           "<"
         )
@@ -226,7 +258,7 @@
           [".image--uno--lady"],
           {
             scale: 1,
-            x:-5,
+            x: -5,
           },
           "<"
         )

@@ -124,7 +124,7 @@ section {
               width: 90%;
               height: 90%;
               scale: 1;
-              top: 10%;
+              top: 18%;
               left: 35%;
             }
 
@@ -142,6 +142,15 @@ section {
         }
       }
     }
+
+    .texto{
+      font-size: 22rem;
+      font-weight: bold;
+      line-height: 1px;
+      position: relative;
+      top: -90%;
+      left: 90%;
+    }
   }
 
   .cero-derecha {
@@ -156,6 +165,12 @@ section {
 
   .cero-mascara-bg {
     z-index: 1;
+
+    .texto{
+      top: -130%;
+      left: 110%;
+
+    }
   }
 
   .cero-mascara-fondo {
@@ -173,6 +188,13 @@ section {
 
   .elemento-libre {
     opacity: 0;
+  }
+
+  .cero-derecha{
+    .texto{
+      top: -130%;
+      left: -120%;
+    }
   }
 
   .title {
