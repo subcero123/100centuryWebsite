@@ -1,5 +1,10 @@
+@font-face {
+  font-family: "ColateraSoft"; /* Nombre de la fuente */
+  src: url("fonts/ColateraSoft.ttf") format("truetype"); /* Ruta al archivo de la fuente */
+}
 body {
   background-color: #f4eddc;
+  font-family: "ColateraSoft", sans-serif;
 }
 
 section {
@@ -132,12 +137,15 @@ section .central .one .mask .image--lady {
   transform: translate(-250px, 300px);
 }
 section .central .texto {
-  font-size: 22rem;
+  width: 10000px;
+  opacity: 0;
+  font-size: 40rem;
   font-weight: bold;
   line-height: 1px;
   position: relative;
-  top: -90%;
+  top: -190%;
   left: 90%;
+  letter-spacing: -4rem;
 }
 section .cero-derecha {
   transform: translateX(70px);
@@ -151,7 +159,7 @@ section .cero-mascara-bg {
   z-index: 1;
 }
 section .cero-mascara-bg .texto {
-  top: -130%;
+  top: -180%;
   left: 110%;
 }
 section .cero-mascara-fondo {
@@ -169,14 +177,14 @@ section .elemento-libre {
   opacity: 0;
 }
 section .cero-derecha .texto {
-  top: -130%;
-  left: -120%;
+  top: -180%;
+  left: -185%;
 }
 section .title {
   position: absolute;
-  width: 350px;
+  width: 450px;
   height: 200px;
-  top: 65%;
+  top: 70%;
   left: 50%;
   opacity: 1;
   transform: translateX(-50%);

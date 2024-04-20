@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'ColateraSoft'; /* Nombre de la fuente */
+  src: url('fonts/ColateraSoft.ttf') format('truetype'); /* Ruta al archivo de la fuente */
+}
+
+
+
 body {
   background-color: #f4eddc;
+  font-family: 'ColateraSoft', sans-serif;
 }
 
 section {
@@ -144,12 +152,16 @@ section {
     }
 
     .texto{
-      font-size: 22rem;
+      width: 10000px;
+      opacity: 0;
+      font-size: 40rem;
       font-weight: bold;
       line-height: 1px;
+      
       position: relative;
-      top: -90%;
+      top: -190%;
       left: 90%;
+      letter-spacing: -4rem;
     }
   }
 
@@ -167,7 +179,7 @@ section {
     z-index: 1;
 
     .texto{
-      top: -130%;
+      top: -180%;
       left: 110%;
 
     }
@@ -192,16 +204,16 @@ section {
 
   .cero-derecha{
     .texto{
-      top: -130%;
-      left: -120%;
+      top: -180%;
+      left: -185%;
     }
   }
 
   .title {
     position: absolute;
-    width: 350px;
+    width: 450px;
     height: 200px;
-    top: 65%;
+    top: 70%;
     left: 50%;
     opacity: 1;
     transform: translateX(-50%);
